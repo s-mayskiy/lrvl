@@ -17,6 +17,25 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/', 'HomePageController@index')->name('Home');
+
+Route::group([
+    'prefix' => 'news',
+    'namespace' => 'News',
+    'as' => 'News.'
+], function () {
+    Route::get('/', 'NewsController@index')->name('index');
+    Route::get('/{id}', 'NewsController@getSingleNews')->name('single');
+});
+
+Route::group([
+    'prefix' => 'categories',
+    'namespace' => 'Categories',
+    'as' => 'Categories.'
+], function () {
+    Route::get('/', 'CategoriesController@Categories')->name('index');
+    Route::get('/{id}', 'CategoriesController@getCategory')->name('Category');
+});
 
 
 
