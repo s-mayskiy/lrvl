@@ -1,4 +1,3 @@
-<?php
-    include_once 'menu.php';
-?>
+@include('menu')
+
 <p>Wellcome!</p>

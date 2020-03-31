@@ -12,8 +12,8 @@ class NewsController extends Controller
         return view('News')->with("News", News::getNews());
     }
 
-    public function getSingleNews($id) {
-        return view('SingleNews')->with("SingleNews", News::getSingleNews($id));
+    public function show($id) {
+        return view('show')->with("SingleNews", News::getSingleNews4Page($id));
     }
 
 }

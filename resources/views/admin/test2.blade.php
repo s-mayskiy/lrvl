@@ -1,4 +1,3 @@
-<?php
-include_once 'menu.php';
-?>
+@include('admin/menu')
+
 <p>Тест 2</p>
