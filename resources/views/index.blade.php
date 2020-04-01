@@ -1,3 +1,14 @@
-@include('menu')
+@extends('layouts.main')
 
-<p>Wellcome!</p>
+@section('title')
+    @parent | Главная
+@endsection
+
+@section('menu')
+    @include('menu')
+@endsection
+
+@section('content')
+    <p>Wellcome!</p>
+@endsection
+

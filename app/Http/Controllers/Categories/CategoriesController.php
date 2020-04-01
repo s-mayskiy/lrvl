@@ -10,10 +10,14 @@ use App\News;
 class CategoriesController extends Controller
 {
     public function show($categoryTxt) {
-        return view('Category')->with("Category", News::getNewsByCategoryId(Categories::getCategoryIdByCategory($categoryTxt)));
+        if (!is_null(Categories::getCategoryIdByCategory($categoryTxt))) {
+            return view('Categories.Category')->with("Category", News::getNewsByCategoryId(Categories::getCategoryIdByCategory($categoryTxt)));
+        } else {
+            return redirect()->route('Categories.index');
+        }
     }
 
     public function index() {
-        return view('Categories')->with("Categories", Categories::getCategories());
+        return view('Categories.index')->with("Categories", Categories::getCategories());
     }
 }
