@@ -9,11 +9,16 @@ use App\Http\Controllers\Controller;
 class NewsController extends Controller
 {
     public function index() {
-        return view('News')->with("News", News::getNews());
+        return view('News.index')->with("News", News::getNews());
     }
 
-    public function getSingleNews($id) {
-        return view('SingleNews')->with("SingleNews", News::getSingleNews($id));
+    public function show($id) {
+        if (array_key_exists($id, News::getNews())) {
+            return view('News.show')->with("SingleNews", News::getSingleNews4Page($id));
+        } else {
+            return redirect()->route('News.index');
+        }
+
     }
 
 }

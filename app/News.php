@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class News
@@ -9,38 +10,38 @@ class News
     private static $news = [
         1 => [
             'id' => 1,
-            'newsCategory' => 'sport',
+            'categoryId' => 1,
             'title' => 'Новость про футбол',
             'text' => 'Футбола у нас больше нет :('
         ],
         2 => [
             'id' => 2,
-            'newsCategory' => 'sport',
+            'categoryId' => 1,
             'title' => 'Новость про академическую греблю',
             'text' => 'Скоро открытие сезона!'
         ],
         3 => [
             'id' => 3,
-            'newsCategory' => 'sport',
+            'categoryId' => 1,
             'title' => 'Новость про бокс',
             'text' => 'Рой Джонс возвращается!'
         ],
 
         4 => [
             'id' => 4,
-            'newsCategory' => 'politics',
+            'categoryId' => 2,
             'title' => 'Новость про Гондурас',
             'text' => 'В Гондурасе прходят выборы президента.'
         ],
         5 => [
             'id' => 5,
-            'newsCategory' => 'politics',
+            'categoryId' => 2,
             'title' => 'Новость про ООН',
             'text' => 'ООН приняла решение перенести штаб-квартиру в Гондурас.'
         ],
         6 => [
             'id' => 6,
-            'newsCategory' => 'space',
+            'categoryId' => 3,
             'title' => 'Новость про NASA',
             'text' => 'NASA забыла астронавта на Марсе.'
         ],
@@ -50,29 +51,26 @@ class News
         return static::$news;
     }
 
-    public static function getNewsCategories() {
-        $newsCategories = [];
-        foreach (static::$news as $singleNews) {
-
-            if (!in_array($singleNews['newsCategory'], $newsCategories)) {
-                $newsCategories[] = $singleNews['newsCategory'];
-            }
-        }
-        return $newsCategories;
+    public static function getSingleNews($id) {
+        return static::$news[$id];
     }
 
-    public static function getCategory($id) {
+    public static function getSingleNews4page($id) {
+        return [
+                'category' => Categories::getCategory(static::$news[$id]['categoryId']),
+                'singleNews' => static::$news[$id]
+                ];
+    }
+
+
+    public static function getNewsByCategoryId ($categoryId)
+    {
         $newsOfCategory = [];
         foreach (static::$news as $singleNews) {
-
-            if ($singleNews['newsCategory'] == $id) {
+            if ($singleNews['categoryId'] == $categoryId) {
                 $newsOfCategory[] = $singleNews;
             }
         }
-        return ['categoryId' => $id, 'news' => $newsOfCategory];
-    }
-
-    public static function getSingleNews($id) {
-        return static::$news[$id];
+        return ['name' => Categories::getCategory($categoryId)["name"], 'news' => $newsOfCategory];
     }
 }

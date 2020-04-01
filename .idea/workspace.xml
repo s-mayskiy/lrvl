@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cb3905-5cbd-4fb5-a42a-42d66adc22c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/News/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Categories/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Categories/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/News/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Categories/Category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/News.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/test1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/test1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/test2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/test2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/News/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,13 +170,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\VM\code\laravel\resources\views\Categories" />
+      <recent name="G:\VM\code\laravel\resources\views\News" />
+      <recent name="G:\VM\code\laravel\app\Http\Controllers\news" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\VM\code\laravel\resources\views" />
       <recent name="G:\VM\code\laravel\app" />
       <recent name="G:\VM\code\laravel\app\Http\Controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\VM\code\laravel\app\Http\Controllers\news" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Remote Debug.https://laravel.local/">
@@ -196,6 +208,8 @@
       <workItem from="1585227106811" duration="3876000" />
       <workItem from="1585310870750" duration="12444000" />
       <workItem from="1585382225670" duration="5135000" />
+      <workItem from="1585668945210" duration="6880000" />
+      <workItem from="1585725415007" duration="8613000" />
     </task>
     <servers />
   </component>
@@ -267,10 +281,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="334" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585384049623" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1585326447994">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1585674497775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585326447994" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585674497775" />
     <state x="463" y="165" key="SettingsEditor" timestamp="1585134850372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -279,14 +293,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1098" y="378" key="WebDeployment.AddServerDialog.v.1/0.0.1920.1040@0.0.1920.1040" timestamp="1585229732797" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585382226992">
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585725415966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585382226992" />
-    <state x="886" y="142" width="607" height="804" key="find.popup" timestamp="1585319683094">
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585725415966" />
+    <state x="886" y="142" width="607" height="804" key="find.popup" timestamp="1585675651318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="886" y="142" width="607" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585319683094" />
+    <state x="886" y="142" width="607" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585675651318" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585321349045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

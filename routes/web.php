@@ -25,7 +25,7 @@ Route::group([
     'as' => 'News.'
 ], function () {
     Route::get('/', 'NewsController@index')->name('index');
-    Route::get('/{id}', 'NewsController@getSingleNews')->name('single');
+    Route::get('/{id}', 'NewsController@show')->name('show');
 });
 
 Route::group([
@@ -33,9 +33,17 @@ Route::group([
     'namespace' => 'Categories',
     'as' => 'Categories.'
 ], function () {
-    Route::get('/', 'CategoriesController@Categories')->name('index');
-    Route::get('/{id}', 'CategoriesController@getCategory')->name('Category');
+    Route::get('/', 'CategoriesController@index')->name('index');
+    Route::get('/{id}', 'CategoriesController@show')->name('show');
 });
 
-
+Route::group([
+    'prefix' => 'admin',
+    'namespace' => 'Admin',
+    'as' => 'admin.'
+], function () {
+    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('/test1', 'IndexController@test1')->name('test1');
+    Route::get('/test2', 'IndexController@test2')->name('test2');
+});
 
